@@ -17,4 +17,4 @@ Step 7: Choose a support plan (Basic - free).
 
 Step 8: Once completed, log in to the AWS Management Console using your credentials.
 
-Would you like this added to your Day-1 README.md as your DevOps Day 1 notes?
+
