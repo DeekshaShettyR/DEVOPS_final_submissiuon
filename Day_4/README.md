@@ -1,53 +1,95 @@
 Sign into AWS account 
+
 Create instance
+
 Select server
+
 Putty.exe
+
 Font 14
+
 Connection 
+
 60
-Ssh Auth browse installed instance file 
+
+Ssh Auth browse installed 
+
+instance file 
+
 Save 
+
 Accept
+
 sudo su
+
 Yum install docker -y
+
 service docker status
+
 service docker start
+
 service docker status
+
 Docker create ubuntu /bin/bash
-docker ps -a
-Copy id
-docker start paste
-docker ps
+
 docker ps -a
 
-Docker Create -it --name webserver amazonlinux /bin/bash
+Copy id
+
+docker start paste
+
+docker ps
+
+docker ps -a
+
+
+Docker Create -it --name 
+webserver amazonlinux /bin/bash
 
 Docker ps -a
+
 docker start webserver
+
 Docker ps
+
 docker exec -it  webserver /bin/bash
+
 Ls
+
 Exit
+
 docker run -it --name sample ubuntu /bin/bash 
 
 Ctrl p q
+
 Docker ps
 
 Docker run -td --name web-app -p 3002:3000 muralisocial123cart-page-test:1.0
 
 docker ps 
+
 Click on instance id
+
 New browser paste:3002
 
 Can't be reachable 
- Sooo
+
+ Soo
+ 
 Instance 
+
 Instanceid
+
 Security
+
 Security group 
+
 Edit inbound
+
 Add rule 
+
 All tcp
+
 Ipv4
 
 
@@ -83,10 +125,15 @@ The docker file is a text document it contains set of instructions
 ) 
 
 Github.com /msocial123
+
 Fork 
+
 Main/master select master
+
 Copy code url
+
 Go to powershell 
+
 git clone -b master paste url
 
 Task 
