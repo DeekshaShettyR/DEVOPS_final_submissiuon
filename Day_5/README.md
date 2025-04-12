@@ -125,3 +125,157 @@ We have container run time is nothing but docker is responsible for pulling the 
 
 
 
+
+Here's your **Day 5** content converted into **well-organized, pointwise format**:
+
+---
+
+### **DAY 5: Containerization and Kubernetes**
+
+---
+
+#### **Problems with Containerization:**
+1. **No Autoscaling Support:**
+   - Containers do not automatically scale based on traffic.
+   - **Scale Up**: Manually increase number of servers when traffic increases.
+     - **Vertical Scaling**: Increase system resources.
+     - **Horizontal Autoscaling**: Add additional servers to the infrastructure.
+   - **Scale Down**: Manually remove servers when traffic decreases.
+
+2. **No Load Balancing Support:**
+   - Containers do not handle distribution of traffic across instances.
+
+3. **No Self-Healing:**
+   - If a container fails, it leads to application downtime.
+
+4. **Solution:**  
+   - To overcome these issues, we move towards **orchestration tools** like **Kubernetes**.
+
+---
+
+### **What is Kubernetes?**
+- A **container orchestration and management tool**.
+- Manages and automates deployment of containers.
+- **Platform independent** – can run on any cloud.
+
+---
+
+### **Kubernetes Features:**
+1. **Orchestration**
+2. **Autoscaling**
+3. **Load Balancing**
+4. **Self-Healing**
+5. **Automatic Deployment**
+
+---
+
+### **Automation in Kubernetes:**
+- Done using a **Manifestation File**.
+
+---
+
+### **Steps to Set Up Kubernetes on AWS (Using Putty):**
+
+#### **1. Launch an Instance:**
+- Set Name, Keypair, and Create Instance.
+- Click on Instance ID → Connect via SSH.
+- Copy the ID (e.g., ubuntu...).
+
+#### **2. Access via Putty Terminal:**
+- Open Putty → Use copied details.
+- In terminal:
+  - `vi cluster.sh`
+  - Right-click to paste code (e.g., msocial123, evernorth, install eksctl)
+  - Press `Esc` → `:wq`
+  - `sudo su`
+  - `ls`
+  - `sh cluster.sh`
+
+---
+
+### **3. Create IAM User in AWS:**
+- Go to IAM → Users → Create User.
+  - Name: **Deeksha-k8s**
+  - Attach Policy: **Administrator Access (2nd option)**
+- Security Credentials → Create Access Key
+  - Check CLI checkbox → Next → Download CSV
+
+---
+
+### **4. Configure AWS CLI in Putty:**
+- `aws configure`
+  - Use access keys from CSV
+  - Set region (check instance)
+  - Leave 4th option blank → Enter
+- `eksctl` → Enter
+
+---
+
+### **5. Install Kubernetes CLI Tools:**
+- `snap install kubectl --classic`
+- `aws eks update-kubeconfig --name Deeksha--cluster --region us-east-1`
+- `kubectl get nodes`
+
+---
+
+### **Setup Note:**
+- Create new folder → Open in **VSCode**.
+
+---
+
+### **Kubernetes Cluster Architecture:**
+
+#### **What is a Cluster?**
+- A **group of nodes** managed together.
+- Consists of:
+  - **Master Node**: Manages cluster health.
+  - **Worker Nodes**: Deploy applications.
+
+#### **Minimum Requirement:**
+- At least **1 Master Node** and **1 Worker Node**.
+
+#### **Types of Clusters:**
+1. **On-Premise Cluster:**
+   - Managed by self.
+   - User responsible for any failure.
+
+2. **Cloud-Managed Cluster:**
+   - Managed by cloud provider.
+
+---
+
+### **Master Node Components:**
+1. **API Server**: Core of the cluster, handles autoscaling and load balancing.
+2. **etcd**: Distributed key-value store for cluster data.
+3. **Controllers**: Monitor application health and state.
+4. **Scheduler**: Assigns pods to nodes.
+
+---
+
+### **Worker Node Components:**
+1. **Kubelet**:
+   - Creates and manages pods.
+   - Communicates with master when issues arise.
+
+2. **Container Runtime**:
+   - e.g., **Docker**.
+   - Pulls images, creates containers, manages lifecycle.
+
+3. **Kube Proxy**:
+   - Handles networking.
+   - Creates deployments and exposes application to the internet.
+
+---
+
+### **Pods in Kubernetes:**
+- **Smallest deployable unit**.
+- Contains one or more containers.
+- Containers in a pod share resources and are tightly coupled.
+
+---
+
+Let me know if you'd like this as a PDF, DOC, or any other format!
+
+
+
+
