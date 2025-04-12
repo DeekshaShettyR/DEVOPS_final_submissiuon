@@ -1,45 +1,80 @@
 Day 3 terraform
 Install terraform for windows
+
 Go to cdrive, program files,create new folder called terraform,extract downloaded file to created folder,double click on path add it to system variable path -edit-ok.
 
 
 Install AWS commandline on windows
+
 Powershell-   aws --version
 
 
 Login to AWS account 
+
 Menu
+
 Security identify and compliancea
+
 Iam
+
 Users
+
 Create user
+
 Name 
+
 Next
+
 Next
+
 Attach(add permissions)
+
 EC2
+
 SelectAmazon...
+
 Vpc
+
 SelectAmazon...
+
 Next
+
 Create user
+
 Open users
+
 Security credentials 
+
 Create access keystone 
+
 Commandline
+
 Checkbox
 
 Go to powershell
+
 AWS version
+
 AWS confiqure
+
 Copy access id
+
 Paste here
+
 Secret key
+
 Region 
-Terraform script folder inside c load it into vs code
+
+Terraform script folder inside c 
+
+load it into vs code
+
 Open folder
+
 Create file terraform script
-Go to extension search for terraform
+
+Go to extension search for 
+terraform
 Install
 EC2.tf
 Code
